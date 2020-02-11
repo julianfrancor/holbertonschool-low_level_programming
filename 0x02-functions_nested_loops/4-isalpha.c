@@ -1,10 +1,8 @@
 #include "holberton.h"
 /**
-* _isalpha(int c)
-* checks for alphabetic character.
-* input is intiger
-* return 1 if c  is a letter, lowercase or uppercase
-* return 0 if c is otherwise
+* _isalpha - checks for alphabetic character.
+* @c: input is intiger
+* Return: 1 if c  is a letter, lowercase or uppercase 0 if c is otherwise
 */
 
 int _isalpha(int c)
