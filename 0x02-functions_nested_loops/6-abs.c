@@ -1,11 +1,9 @@
 #include "holberton.h"
 /**
-* abs(int)
-* function that computes the absolute value of an integer
-* input is intiger
-* Returns nothing
-*
-*/
+ * _abs - function that computes the absolute value of an integer
+ * @n: input is intiger
+ * Return:@n
+ */
 
 int _abs(int n)
 {
