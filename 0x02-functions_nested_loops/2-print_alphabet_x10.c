@@ -1,11 +1,9 @@
 #include "holberton.h"
 
 /**
-	* print_alphabet_x10()
-	* prints the alphabet 10 times to stdout
-	* is void because it doesn't require any input
-	* and doesn't give any return value
-	*/
+ * print_alphabet_x10 - prints the alphabet 10 times to stdout
+ * Return: none and no input
+ */
 
 void print_alphabet_x10(void)
 {
