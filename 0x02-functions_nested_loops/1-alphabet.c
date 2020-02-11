@@ -1,9 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_alphabet() - prints the alphabet to  stdout
- * is void because it doesn't require any input
- * and doesn't give any return value
+ * print_alphabet - function print the alphabet to stdout
+ * Return: value 0
  */
 
 void print_alphabet(void)
