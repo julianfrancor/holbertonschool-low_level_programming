@@ -12,13 +12,14 @@ int main(void)
 
 	i = 612852475143;
 
-	for (j = 2; j <= i; j++)
+	for (j = 2; j <= (i / 2); j++)
 	{
-		if (((i % j) == 0) && (!(i % 2) == 0))
-		printf("%ld", j);
+		if ((i % j) == 0)
+		{
+		i = i / j;
+		j = 1;
 		}
-	printf("%ld",j);
 	}
+	printf("%ld \n", i);
 	return (0);
 }
-
