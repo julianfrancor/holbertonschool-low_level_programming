@@ -19,6 +19,6 @@ int main(void)
 		j = 1;
 		}
 	}
-	printf("%ld \n", i);
+	printf("%lu \n", i);
 	return (0);
 }
