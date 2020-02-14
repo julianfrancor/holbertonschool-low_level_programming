@@ -15,10 +15,10 @@ int main(void)
 	{
 		if ((i % j) == 0)
 		{
-		i = i / j;
-		j = 1;
+			i = i / j;
+			j = 1;
 		}
 	}
-	printf("%lu \n", i);
+	printf("%lu\n", i);
 	return (0);
 }
