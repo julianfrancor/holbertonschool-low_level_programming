@@ -7,12 +7,11 @@
       */
 int main(void)
 {
-	long int i;
-	long int j;
+	unsigned long i, j;
 
 	i = 612852475143;
 
-	for (j = 2; j <= (i / 2); j++)
+	for (j = 2; j < (i / 2); j++)
 	{
 		if ((i % j) == 0)
 		{
