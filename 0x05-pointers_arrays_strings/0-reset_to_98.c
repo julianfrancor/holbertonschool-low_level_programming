@@ -1,11 +1,12 @@
 #include "holberton.h"
 
 /**
-   * print_numbers - function that prints the
-    * numbers, from 0 to 9, followed by a new line.
-     * input is void
-      * Return: void
-       */
+ * reset_to_98 - function that takes a pointer
+ * to an int as parameter and updates the value
+ * it points to to 98
+ * @*n: input is a parameter
+ * Return: void
+ */
 
 void reset_to_98(int *n)
 {;
