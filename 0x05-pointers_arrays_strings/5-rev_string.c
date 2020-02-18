@@ -18,7 +18,6 @@ void rev_string(char *s)
 		i++;
 	}
 	i--;
-
 	if (i % 2 == 0)
 	{
 		iter = i;
@@ -29,8 +28,9 @@ void rev_string(char *s)
 	}
 	for (j = 0; j < iter; j++)
 	{
-		q = s[iter - j];
-		s[iter - j] = s[j];
+		q = s[iter];
+		s[iter] = s[j];
 		s[j] = q;
+	iter--;
 	}
 }
