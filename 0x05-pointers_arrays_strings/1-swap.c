@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * swap_int - function that swaps the 
+ * swap_int - function that swaps the
  * values of two integers.
  * @a: input is a parameter
  * @b: input is a parameter
