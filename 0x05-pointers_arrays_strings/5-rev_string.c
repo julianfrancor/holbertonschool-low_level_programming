@@ -27,11 +27,10 @@ void rev_string(char *s)
 	{
 		iter = i + 1;
 	}
-
 	for (j = 0; j < iter; j++)
 	{
-	q = s[iter - j];
-	s[iter - j] = s[j];
-	s[j] = q;
+		q = s[iter - j];
+		s[iter - j] = s[j];
+		s[j] = q;
 	}
 }
