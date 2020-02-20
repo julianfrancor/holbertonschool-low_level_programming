@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strcat - 
- * @dest: input is array
- * @src: input is array
- * Return: voi
+ * *_strcat - function that concatenates two strings.
+ * @dest: input is array to be modified
+ * @src: input is array source
+ * Return: char
  */
 
 char *_strcat(char *dest, char *src)
@@ -20,7 +20,7 @@ char *_strcat(char *dest, char *src)
 	while (dest[j] != 0)
 	{
 		j++;
-	}       
+	}
 
 	/*concatenating the two strings, I'm pasting src at the*/
 	/*end of dest.*/
@@ -30,6 +30,6 @@ char *_strcat(char *dest, char *src)
 	}
 
 	dest[j + k] = '\0';
-	
+
 	return (dest);
 }
