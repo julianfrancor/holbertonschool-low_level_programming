@@ -20,6 +20,10 @@ char *cap_string(char *s)
 			{
 				s[i] = s[i] - 32;
 			}
+			else if (s[i] >= 'a' && s[i] <= 'z' && s[i] != sep[j] && s[i - 1] == 46)
+		{
+			s[i] = s[i] - 32;
+		}
 		}
 	}
 	for (k = 0; k <= i; k++)
