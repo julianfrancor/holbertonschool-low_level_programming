@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_number - function that
+ * _memset - function that
  * fills memory with a constant byte.
  * @s: pointer is char
  * @b: variable is char
@@ -12,7 +12,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
-	
+
 	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
