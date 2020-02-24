@@ -25,8 +25,10 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 		{
 			s = &s[i];
+			/*once you find the first c break*/
 			break;
 		}
+		/*here we are setting the whole string as NULL*/
 		else if (s[i] == 0)
 		{
 			s = '\0';
