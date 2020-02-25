@@ -2,13 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main - function
- *
- *
- *
+/**
+ * main - random function 
+ * return - intiger
  */
 
-int main() 
+int main(void)
 {
 	int lon = 2772;
 	char r;
@@ -21,7 +20,7 @@ int main()
 		lon = lon - r;
 		printf("%c", r);
 	}
-	printf("%c",lon);
+	printf("%c", lon);
 
-	return 0;
+	return (0);
 }
