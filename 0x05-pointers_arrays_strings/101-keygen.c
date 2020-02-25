@@ -14,9 +14,9 @@ int main(void)
 
 	srand(time(NULL));
 
-	while (lon > 127)
+	while (lon > 90)
 	{
-		r = rand();
+		r = (rand() % (90 - 65)) + 65;
 		lon = lon - r;
 		printf("%c", r);
 	}
