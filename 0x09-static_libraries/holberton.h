@@ -1,7 +1,8 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
-/*prototypes
+/*
+ *prototypes
  *
  */
 
