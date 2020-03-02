@@ -1,33 +1,40 @@
 #include "holberton.h"
 
 /**
- * print_number - function that prints an intiger,
- * followed by a new line.
- * @n: input
- * Return: void
- */
+   * print_number - function that
+    * prints an integer.
+     * @n: input is an intiger
+      * Return: void
+       */
 
 void print_number(int n)
 {
-	int nNew, i, q, base;
-	
-	nNew = n;
+	unsigned int m;
+	int i, k;
 
-	while (nNew != 0)
+	if (n < 0)
 	{
-		nNew = nNew / 10;
-
-		i++;
+		n *= -1;
+		_putchar('-');
 	}
-	base = 10;
-	while(i != 0)
+	m = n;
+	k = 0;
+	while (m / 10 > 0)
 	{
-	base *= i;
-	
-	q = n / base;
-	
-	_putchar(q + '0'); 	
-	
-	--i;
+		m /= 10;
+		k++;
 	}
+	m = n;
+	while (k != 0)
+	{
+		for (i = 0; i < k; i++)
+		{
+			m /= 10;
+		}
+		m %= 10;
+		_putchar(m + '0');
+		k--;
+		m = n;
+	}
+	_putchar(m % 10 + '0');
 }
