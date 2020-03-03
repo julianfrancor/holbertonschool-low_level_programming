@@ -14,7 +14,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **arr;
-	int k = 0, q = 0;
+	int k = 0, q = 0, i;
 
 	if (width <= 0 && height <= 0)
 		return (NULL);
@@ -26,7 +26,17 @@ int **alloc_grid(int width, int height)
 	{
 		arr[k] = (int *) malloc(sizeof(int) * width);
 		if (!arr)
-			return (NULL);
+		{
+			for (i = 0; i < k; i++)
+			{
+				free(arr[i]);
+			}
+			free(arr);
+			return (0);
+		}
+		/**
+		 *initializing the matriz with zero.
+		 */
 		for (q = 0; q < width; q++)
 		{
 			arr[k][q] = 0;
