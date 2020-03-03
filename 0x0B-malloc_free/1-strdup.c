@@ -33,7 +33,7 @@ char *_strdup(char *str)
 		p[j] = str[j];
 		j++;
 	}
-	if (j < i)
+	if (!p)
 		return (NULL);
 	return (p);
 }
