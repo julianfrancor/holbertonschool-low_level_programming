@@ -14,8 +14,7 @@
 char *_strdup(char *str)
 {
 	char *p;
-	unsigned int i;
-	int j;
+	unsigned int i, j;
 
 	if (str == NULL)
 	{
@@ -34,7 +33,7 @@ char *_strdup(char *str)
 		p[j] = str[j];
 		j++;
 	}
-	if (sizeof(p) < sizeof(str))
+	if (j < i)
 		return (NULL);
 	return (p);
 }
