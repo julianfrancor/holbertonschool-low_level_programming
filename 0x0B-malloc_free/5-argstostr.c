@@ -7,7 +7,7 @@
  * concatenates all the arguments of your program.
  * @ac: int
  * @av: array char
- * Return: char
+ * Return: pointer 
  */
 
 char *argstostr(int ac, char **av)
@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	char *string;
 	int i, words, sizetotal, positionbreak;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 		}
 	}
 	string =  malloc(sizeof(char) * (sizetotal + ac + 1));
-	if (string == 0)
+	if (string == NULL)
 		return (NULL);
 	positionbreak = 0;
 	for (i = 0; i < ac; i++)
