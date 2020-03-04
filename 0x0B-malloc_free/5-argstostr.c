@@ -7,13 +7,13 @@
  * concatenates all the arguments of your program.
  * @ac: int
  * @av: array char
- * Return: pointer 
+ * Return: pointer
  */
 
 char *argstostr(int ac, char **av)
 {
 	char *string;
-	int i, words, sizetotal, positionbreak;
+	int i = 0, words = 0, sizetotal = 0, positionbreak = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
