@@ -42,6 +42,5 @@ char *argstostr(int ac, char **av)
 		string[positionbreak] = '\n';
 		positionbreak++;
 	}
-	string[positionbreak] = '\0';
 	return (string);
 }
