@@ -16,8 +16,8 @@ char *argstostr(int ac, char **av)
 	char *string;
 	int i, words, sizetotal, positionbreak;
 
-	if (ac == 0 || av == '\0')
-		return (NULL);
+	if (ac == 0 || av == 0)
+		return (0);
 	for (i = 0; i < ac; i++)
 	{
 		words = 0;
@@ -28,8 +28,9 @@ char *argstostr(int ac, char **av)
 		}
 	}
 	string = (char *) malloc(sizeof(char) * sizetotal + ac + 1);
-	if (!string)
-		return (NULL);
+	if (string == 0)
+		return (0);
+	positionbreak = 0;
 	for (i = 0; i < ac; i++)
 	{
 		words = 0;
