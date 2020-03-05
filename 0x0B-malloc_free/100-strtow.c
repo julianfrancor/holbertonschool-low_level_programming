@@ -9,10 +9,10 @@
  * Return: char
  */
 
-char **strtow(char *str);
+char **strtow(char *str)
 {
-	int i = 0, j = 0;
-	char *string;
+	int i = 0, j = 0, words = 0, palabras = 0;
+	char **array;
 
 	if (str == NULL || str == "")
 		return (NULL);
@@ -20,8 +20,11 @@ char **strtow(char *str);
 	{
 		if (str[i] != ' ')
 			words++;
+		if (str[i] == ' ' && str[i+1] != ' ')
+			palabras++;
 	}
-	string = malloc(sizeof(char) * words + 1 + 
-	for (j = 0; j > i; j++)
-	{
-		string[j] = 
+		printf("%d'\n'", palabras);
+	array = malloc(sizeof(char*) * words + palabras + 1); 
+	return (array);
+}
+
