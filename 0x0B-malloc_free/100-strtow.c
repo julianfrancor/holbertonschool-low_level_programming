@@ -20,10 +20,11 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 			words++;
-		if (str[i] == ' ' && str[i+1] != ' ')
+		if (str[i] != ' ' && str[i+1] == ' ')
 			palabras++;
 	}
 		printf("%d'\n'", palabras);
+		printf("%d'\n'", words);
 	array = malloc(sizeof(char*) * words + palabras + 1); 
 	return (array);
 }
