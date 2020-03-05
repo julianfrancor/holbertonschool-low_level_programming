@@ -5,18 +5,18 @@
 /**
  * malloc_checked - function that
  * allocates memory using malloc.
- * @b - unsigned int parametrer
- * Return - void
+ * @b: unsigned int parametrer
+ * Return: void
  */
 
 void *malloc_checked(unsigned int b)
 {
 	char *ptr;
 
-	ptr = malloc (sizeof(char) * b);
+	ptr = malloc(sizeof(char) * b);
 	if (!ptr)
 	{
-		exit (98);
+		exit(98);
 	}
 	return (ptr);
 }
