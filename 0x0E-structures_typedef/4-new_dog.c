@@ -58,13 +58,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	(*perroMueco).age = age;
 
 	(*perroMueco).name = _strdup(name);
-	if (name == NULL)
+	if ((*perroMueco).name == NULL)
 	{
 		free(perroMueco);
 		return (NULL);
 	}
 	(*perroMueco).owner = _strdup(owner);
-	if (owner == NULL)
+	if ((*perroMueco).owner == NULL)
 	{
 		free((*perroMueco).name);
 		free(perroMueco);
