@@ -21,15 +21,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		return (-1);
 	}
-	else
-	{
 		for (i = 0; i < size; i++)
 		{
 			carry = cmp(array[i]);
 			if (carry != 0)
 				return (i);
 		}
-				return (-1);
-	}
 	return (-1);
 }
