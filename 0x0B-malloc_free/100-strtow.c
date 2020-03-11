@@ -20,6 +20,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ')
 			words++;
+		printf("%d", words);
 		if (str[i] != ' ' && str[i+1] == ' ')
 			palabras++;
 	}
