@@ -13,7 +13,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, carry;
 
-	if (array == '\0' && cmp == '\0')
+	if (array == '\0' || cmp == '\0')
 	{
 		return (0);
 	}
