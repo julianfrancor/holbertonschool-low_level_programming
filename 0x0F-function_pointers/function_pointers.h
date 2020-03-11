@@ -1,5 +1,5 @@
-#ifdef FUNCTION_PINTER_H
-#define FUNCTION_PINTER_H
+#ifdef FUNCTION_POINTER_H
+#define FUNCTION_POINTER_H
 
 /*prototypes
  *
@@ -7,4 +7,4 @@
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
 
-#endif // FUNCTION_PINTER_H
+#endif // FUNCTION_POINTER_H
