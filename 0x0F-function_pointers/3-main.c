@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     num1 = atoi (argv[1]);
     num2 = atoi (argv[3]);
-    if (argc != 3)
+    if (argc != 4)
 	{
 		puts("Error");
 		exit(98);
