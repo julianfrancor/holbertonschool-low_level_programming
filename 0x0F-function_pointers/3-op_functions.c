@@ -53,7 +53,7 @@ int op_mul(int a, int b)
 
 /**
  * op_div - function that
- * returns the result of the division of a by b. 
+ * returns the result of the division of a by b.
  * @a: input intiger
  * @b: input intiger
  * Return: intiger if success
