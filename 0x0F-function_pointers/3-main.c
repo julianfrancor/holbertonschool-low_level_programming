@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
     char *operator;
 
     operator = argv[2];
-    num1 = 0;
-    num2 = 0;
 
+    num1 = atoi (argv[1]);
+    num2 = atoi (argv[3]);
     if (argc != 3)
 	{
 		puts("Error");
@@ -28,8 +28,7 @@ int main(int argc, char *argv[])
     	puts("Error");
 		exit(100);
     }
-    num1 = atoi (argv[1]);
-    num2 = atoi (argv[3]);
+
     result = get_op_func(operator)(num1, num2);
     printf("%d\n", result);
     return (0);
