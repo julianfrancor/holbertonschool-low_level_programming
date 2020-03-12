@@ -16,14 +16,13 @@ char *operator;
 
 operator = argv[2];
 
-num1 = atoi(argv[1]);
-num2 = atoi(argv[3]);
-
 if (argc != 4)
 {
 	puts("Error");
 	exit(98);
 }
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
 if ((num2 == 0) && ((*operator == '/') || (*operator == '%')))
 {
 puts("Error");
