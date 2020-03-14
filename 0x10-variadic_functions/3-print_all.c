@@ -7,10 +7,7 @@
  */
 void print_char(va_list c)
 {
-	char character;
-
-	character = va_arg(c, int);
-	printf("%c", character);
+	printf("%c", va_arg(c, int));
 }
 
 /**
@@ -20,10 +17,7 @@ void print_char(va_list c)
  */
 void print_intiger(va_list i)
 {
-	int num;
-
-	num = va_arg(i, int);
-	printf("%d", num);
+	printf("%d", va_arg(i, int));
 }
 
 /**
@@ -31,12 +25,10 @@ void print_intiger(va_list i)
  * @f: list of floats
  * Return: void.
  */
+
 void print_float(va_list f)
 {
-	float flotador;
-
-	flotador = va_arg(f, double);
-	printf("%f", flotador);
+	printf("%f", va_arg(f, double));
 }
 
 /**
@@ -80,7 +72,7 @@ void print_all(const char * const format, ...)
 
 	va_start(valist, format);
 	i = 0;
-	while (format && format[i])
+	while (format && format[i])\
 	{
 		j = 0;
 		while (perro[j].dog)
