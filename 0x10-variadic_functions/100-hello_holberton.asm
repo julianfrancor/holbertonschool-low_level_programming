@@ -8,4 +8,4 @@ main:
 		mov eax,0
 		int 0x80
 section .data
-		msg db 'Hello, Holberton', 0xa
+		msg db 'Hello, Holberton',0xa
