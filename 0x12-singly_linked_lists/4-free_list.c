@@ -24,7 +24,7 @@ void free_list(list_t *head)
 		free(temp);
 	}
 	/**
-	 *
+	 * freees the las memory allocation
 	 */
 	free(head);
 }
