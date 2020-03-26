@@ -7,20 +7,16 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *nodeloop;
+	listint_t *node1, *node2;
 
-
-	while (head)
+	node1 = head;
+	node2 = head;
+	while (node1 && node2 && node2->next)
 	{
-		if (head - head->next > 0)
+		if (node1 == node2)
 		{
-			head = head->next;
-		}
-		else
-		{
-			nodeloop = head->next;
-			return (nodeloop);
+			return (node1);
 		}
 	}
-	return (0);
+	return (NULL);
 }
