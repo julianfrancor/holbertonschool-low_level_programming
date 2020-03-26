@@ -32,7 +32,6 @@ unsigned int binary_to_uint(const char *b)
 	int len_binary = 0, i = 0;
 	unsigned int nunsignd_int = 0, base = 1;
 
-	
 	if (b == NULL)
 		return (0);
 
