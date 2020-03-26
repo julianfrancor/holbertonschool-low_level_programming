@@ -1,6 +1,7 @@
 #  Project title
 
 **0x14. C - Bit manipulation**
+
 [Holberton School - Bit Manipulation Project](https://intranet.hbtn.io/projects/232#task-1022)
 
 ##  General Information
@@ -26,4 +27,5 @@
 ## Developer Information
 
 [GitHub - Julian Franco Rua](https://github.com/julianfrancor)
+
 [LinkedIn - Julian Franco Rua](https://www.linkedin.com/in/julianfrancor/)
