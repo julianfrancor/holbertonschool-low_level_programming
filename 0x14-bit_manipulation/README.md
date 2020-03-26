@@ -24,7 +24,7 @@
  - The ~ (bitwise NOT) in C or C++ takes one number and inverts all bits
    of it.
 
-## Developer Information
+## Author
 
 [GitHub - Julian Franco Rua](https://github.com/julianfrancor)
 
