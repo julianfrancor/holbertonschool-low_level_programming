@@ -22,7 +22,7 @@
    bits of the first operand, the second operand decides the number of
    places to shift.
  - The ~ (bitwise NOT) in C or C++ takes one number and inverts all bits
-   of it
+   of it.
 
 ## Developer Information
 
