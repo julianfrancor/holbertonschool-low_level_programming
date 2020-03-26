@@ -25,5 +25,5 @@ listint_t *find_listint_loop(listint_t *head)
 			return (nodeloop);
 		}
 	}
-	return (NULL);
+	return (0);
 }
