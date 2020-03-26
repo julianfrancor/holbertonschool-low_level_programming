@@ -3,8 +3,6 @@
 
 #### [Low-level programming & Algorithm - Hatching out](https://intranet.hbtn.io/dashboards/my_current_projects#collapse-block-8)  
 
-https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/212/cisfun.jpg
-
 ##  Getting Started
 
  -   What is a zero-day
