@@ -32,11 +32,12 @@ unsigned int binary_to_uint(const char *b)
 	int len_binary = 0, i = 0;
 	unsigned int nunsignd_int = 0, base = 1;
 
-	ptr = (char *)b;
-	len_binary = _strlen(ptr);
-
+	
 	if (b == NULL)
 		return (0);
+
+	ptr = (char *)b;
+	len_binary = _strlen(ptr);
 
 	i = len_binary - 1;
 	while (i >= 0)
