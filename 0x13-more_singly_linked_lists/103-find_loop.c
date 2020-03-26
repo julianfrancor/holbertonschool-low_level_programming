@@ -9,6 +9,14 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *nodeloop;
 
+	if (head == NULL)
+	{
+		return (0);
+	}
+	if (head == head->next)
+	{
+		return (head);
+	}
 	while (head)
 	{
 		if (head - head->next > 0)
@@ -17,7 +25,7 @@ listint_t *find_listint_loop(listint_t *head)
 		}
 		else
 		{
-			nodeloop = head;
+			nodeloop = head->next;
 			return (nodeloop);
 		}
 	}
