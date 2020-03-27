@@ -14,9 +14,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (n == NULL)
 		return (-1);
-	auxbinary = auxbinary << index;
-	if (auxbinary == 0)
+	if (index > 64)
 		return (-1);
+	auxbinary = auxbinary << index;
 	*n = *n | auxbinary;
-		return (1);
+	return (1);
 }
