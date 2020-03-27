@@ -9,33 +9,15 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int array_int[((sizeof(unsigned long int) * 8))], i;
-	unsigned int contador = 0;
-	unsigned long int k;
+	unsigned long int auxbinary = 1;
 
-	if (n == 0)
-		return (0);
-	else if (n != 0)
-	{
-		for (i = ((sizeof(unsigned long int) * 8) - 1); i >= 0; i--)
-		{
-			k = n >> i;
-			if (k)
-			{
-				if (k & 1)
-				{
-					array_int[i] = 1;
-					contador++;
-				}
-				else
-				{
-					array_int[i] = 0;
-					contador++;
-				}
-			}
-		}
-	}
-	if (index > 64)
+	if (index > (sizeof(unsigned long int) * 8))
 		return (-1);
-	return (array_int[index]);
+
+	auxbinary = auxbinary << index;
+
+	if (n & auxbinary)
+		return (1);
+	else
+		return (0);
 }
