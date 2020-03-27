@@ -9,7 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int array_int[((sizeof(unsigned long int) * 8) - 1)], i;
+	int array_int[((sizeof(unsigned long int) * 8))], i;
 	unsigned int contador = 0;
 	unsigned long int k;
 
