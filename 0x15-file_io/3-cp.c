@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			exit(98); }
 		f_write = write(fd2, temp_buffer, f_position);
 		if (f_write == -1)
-		{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99); }
 	} while (f_position == 1024);
 	f_close = close(fd1);
