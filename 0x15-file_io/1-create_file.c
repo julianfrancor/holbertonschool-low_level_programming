@@ -14,7 +14,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, file_position, lenght = 0;
+	int fd = -1, file_position = 0, lenght = 0;
 
 	if (!filename)
 		return (-1);
