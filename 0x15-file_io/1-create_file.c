@@ -14,7 +14,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd = -1, file_position = 0, lenght = 0;
+	int fd, file_position, lenght = 0;
 
 	if (!filename)
 		return (-1);
@@ -24,17 +24,14 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	/*finding the lenght of the string*/
-	while (text_content[lenght])
+	while (text_content[lenght] != '\0')
 	{
 		lenght++;
 	}
-
 	if (!text_content)
 	{
 		/*if text_content is NULL create an empty file*/
 		file_position = write(fd, text_content, 0);
-		close(fd);
-
 	}
 	else
 	{
@@ -42,11 +39,11 @@ int create_file(const char *filename, char *text_content)
 		/*text_content already created with a string inside*/
 		/*so I don't have to allocate new memory*/
 		file_position = write(fd, text_content, lenght);
-		close(fd);
 	}
 
 	if (file_position == -1)
 		return (-1);
 
+	close(fd);
 	return (1);
 }
