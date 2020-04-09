@@ -26,6 +26,7 @@ void print_tab(char **tab)
 int main(void)
 {
 	char **tab;
+	int k;
 
 	tab = strtow("      Holberton School         #cisfun      ");
 	if (tab == NULL)
@@ -34,5 +35,11 @@ int main(void)
 		return (1);
 	}
 	print_tab(tab);
+
+	for (k = 0; tab[k]; k++)
+		free(tab[k]);
+	free(tab[k]);
+	free(tab);
+
 	return (0);
 }
