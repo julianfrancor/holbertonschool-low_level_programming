@@ -13,7 +13,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, words = 0, letters = 0, k = 0, q = 0;
 	char **array;
 
-	if (str == NULL || str[0] == 0)
+	if (str == '\0' || str[0] == 0)
 		return (NULL);
 /*PRIMERO: MALLOC A LOS PUNTEROS how many words we have in that full string*/
 	for (i = 0; str[i]; i++)
