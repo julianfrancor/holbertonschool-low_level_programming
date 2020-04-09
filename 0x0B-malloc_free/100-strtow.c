@@ -3,6 +3,26 @@
 #include <stdlib.h>
 
 /**
+ * count_words - function that
+ * counts the words in a string
+ * @str_words: char
+ * Return: int
+ */
+int count_words(char *str_words)
+{
+	int i = 0, palabras = 0;
+
+	for (i = 0; str_words[i]; i++)
+	{
+		/*counting the number of words in the str*/
+		if (str_words[i] != ' ' &&
+		(str_words[i + 1] == ' ' || str_words[i + 1] == '\0'))
+			palabras++;
+	}
+	return (palabras);
+}
+
+/**
  * strtow - function that
  * splits a string into words.
  * @str: char
@@ -16,32 +36,25 @@ char **strtow(char *str)
 	if (str == '\0' || str[0] == 0)
 		return (NULL);
 /*PRIMERO: MALLOC A LOS PUNTEROS how many words we have in that full string*/
-	for (i = 0; str[i]; i++)
-	{
-		/*counting the number of words in the str*/
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			words++;
-	}
+	words = count_words(str);
 	if (words == 0)
 		return (0);
 	/*Allocating space for the words we have and one space null at the end*/
 	array = malloc(sizeof(char *) * words + 1);
 	if (!array)
+	{
+		free(array);
 		return (0);
+	}
 /*SEGUNDO: MALLOC A LETRAS EN DE CADA PUNTERO, letters we have on each word*/
 	for (i = 0; str[i] && k < words; i++)
 	{
 		if (str[i] != ' ')
 		{
-			/*finding the space for each string*/
-			j = i;
-			letters = 0;
-			while (str[j] != ' ' && str[j] != '\0')
+			for (j = i, letters = 0; str[j] != ' ' && str[j] != '\0'; j++)
 			{
 				letters++;
-				j++;
 			}
-			/*Allocating space for the number of letter within each word*/
 			array[k] = malloc(sizeof(char) * (letters + 1));
 			if (!array[k])
 			{
@@ -50,7 +63,6 @@ char **strtow(char *str)
 				free(array);
 				return (0);
 			}
-			/*initializing the matriz with str.*/
 			for (q = 0; q < letters; q++, i++)
 				array[k][q] = str[i];
 			array[k++][q] = '\0';
