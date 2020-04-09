@@ -40,10 +40,9 @@ char **strtow(char *str)
 	if (words == 0)
 		return (0);
 	/*Allocating space for the words we have and one space null at the end*/
-	array = malloc(sizeof(char *) * words + 1);
+	array = (char **) malloc(sizeof(char *) * (words + 1));
 	if (!array)
 	{
-		free(array);
 		return (0);
 	}
 /*SEGUNDO: MALLOC A LETRAS EN DE CADA PUNTERO, letters we have on each word*/
@@ -55,7 +54,7 @@ char **strtow(char *str)
 			{
 				letters++;
 			}
-			array[k] = malloc(sizeof(char) * (letters + 1));
+			array[k] = (char *)malloc(sizeof(char) * (letters));
 			if (!array[k])
 			{
 				for (k = k - 1; k >= 0; k++)
