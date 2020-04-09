@@ -54,7 +54,7 @@ char **strtow(char *str)
 			{
 				letters++;
 			}
-			array[k] = (char *)malloc(sizeof(char) * (letters));
+			array[k] = (char *)malloc(sizeof(char) * (letters + 1));
 			if (!array[k])
 			{
 				for (k = k - 1; k >= 0; k++)
