@@ -33,7 +33,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, words = 0, letters = 0, k = 0, q = 0;
 	char **array;
 
-	if (str == '\0' || str[0] == 0)
+	if (*str == '\0' || str == NULL)
 		return (NULL);
 /*PRIMERO: MALLOC A LOS PUNTEROS how many words we have in that full string*/
 	words = count_words(str);
