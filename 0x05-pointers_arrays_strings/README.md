@@ -41,7 +41,7 @@ What you should learn from this project:
 
 
 ### [5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes](./5-rev_string.c)
-* Write a function that reverses a string.  
+* Write a function that reverses a string.
 
 
 ### [6. Half the lies they tell about me aren't true](./6-puts2.c)
@@ -57,9 +57,7 @@ What you should learn from this project:
 
 
 ### [9. strcpy](./9-strcpy.c)
-* Prototype: char *_strcpy(char *dest, char *src); 
-
-
+* Prototype: char *_strcpy(char *dest, char *src);
 
 ### [10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers](./100-atoi.c)
 * Write a function that convert a string to an integer.
