@@ -15,7 +15,7 @@ Read or watch:
 
 ---
 ## Learning Objectives:bulb:
-What you should learn from this project:
+What did I learn from this project:
 
 * What are the arithmetic operators and how to use them
 * What are the logical operators (sometimes called boolean operators) and how to use them
@@ -93,4 +93,7 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Julian Franco Rua** - [julianfrancor](https://github.com/julianfrancor)
+
+* [GitHub - Julian Franco Rua](https://github.com/julianfrancor)
+
+* [LinkedIn - Julian Franco Rua](https://www.linkedin.com/in/julianfrancor/)
