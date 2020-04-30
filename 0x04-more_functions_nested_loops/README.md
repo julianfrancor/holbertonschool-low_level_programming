@@ -10,7 +10,7 @@ Read or watch:
 
 ---
 ## Learning Objectives:bulb:
-What you should learn from this project:
+What did I learn from this project:
 
 * What are nested loops and how to use them
 * What is a function and how do you use functions
@@ -67,7 +67,7 @@ What you should learn from this project:
 
 
 ### [11. The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic](./100-prime_factor.c)
-* The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081. 
+* The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
 
 
 ### [12. Numbers have life; they're not just symbols on paper](./101-print_number.c)
