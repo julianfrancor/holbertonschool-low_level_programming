@@ -10,7 +10,7 @@ Read or watch:
 
 ---
 ## Learning Objectives:bulb:
-What you should learn from this project:
+What did I learn from this project:
 
 * What are nested loops and how to use them
 * What is a function and how do you use functions
@@ -35,11 +35,11 @@ What you should learn from this project:
 
 
 ### [3. islower](./3-islower.c)
-* Write a function that checks for lowercase character. 
+* Write a function that checks for lowercase character.
 
 
 ### [4. isalpha](./4-isalpha.c)
-* Write a function that checks for alphabetic character. 
+* Write a function that checks for alphabetic character.
 
 
 ### [5. Sign](./5-sign.c)
@@ -92,4 +92,7 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Julian Franco Rua** - [julianfrancor](https://github.com/julianfrancor)
+
+* [GitHub - Julian Franco Rua](https://github.com/julianfrancor)
+
+* [LinkedIn - Julian Franco Rua](https://www.linkedin.com/in/julianfrancor/)
