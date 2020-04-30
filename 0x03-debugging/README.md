@@ -8,7 +8,7 @@ Read or watch:
 
 ---
 ## Learning Objectives:bulb:
-What you should learn from this project:
+What did I learn from this project:
 
 * What is debugging
 * What are some methods of debugging manually
@@ -34,4 +34,7 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Julian Franco Rua** - [julianfrancor](https://github.com/julianfrancor)
+
+* [GitHub - Julian Franco Rua](https://github.com/julianfrancor)
+
+* [LinkedIn - Julian Franco Rua](https://www.linkedin.com/in/julianfrancor/)
