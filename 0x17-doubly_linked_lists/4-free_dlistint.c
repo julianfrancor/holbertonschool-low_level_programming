@@ -14,7 +14,7 @@ void free_dlistint(dlistint_t *head)
 	{
 		temp = head;
 		head = head->next;
-		/*freeing the memory allocated with malloc */
+		/*freeing each node allocated with malloc*/
 		free(temp);
 	}
 	/*frees the last memory allocation*/
