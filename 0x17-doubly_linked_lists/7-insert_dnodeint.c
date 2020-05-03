@@ -13,23 +13,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *aux_runner, *new_node;
 	unsigned int nodes = 0, i = 0;
 
-	if (*h == NULL)
+	nodes = dlistint_len(*h);
+	if ((idx > nodes) || (*h == NULL))
 		return (NULL);
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
 		return (NULL);
+
 	new_node->n = n;
-	new_node->prev = NULL;
-	new_node->next = NULL;
 	aux_runner = *h;
-/*let's find out how many nodes we have*/
-	nodes = dlistint_len(*h);
-	if (idx > nodes)
-	{
-		free(new_node);
-		return (NULL);
-	}
+
 	if (idx == 0)
+		return (add_dnodeint(h, n));
+	if (idx == nodes)
 		return (add_dnodeint_end(h, n));
 	else if (idx < nodes)
 	{
