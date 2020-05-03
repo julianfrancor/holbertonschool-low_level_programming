@@ -21,27 +21,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->n = n;
 	new_node->prev = NULL;
 	new_node->next = NULL;
-/*let's find out how many nodes we have*/
 	aux_runner = *h;
-	while (aux_runner)
-	{
-		aux_runner = aux_runner->next;
-		nodes++;
-	}
+/*let's find out how many nodes we have*/
+	nodes = dlistint_len(*h);
 	if (idx > nodes)
 	{
-		free (new_node);
+		free(new_node);
 		return (NULL);
 	}
-	aux_runner = *h;
 	if (idx == 0)
-	{
-
-		new_node->next = *h;
-		aux_runner->prev = new_node;
-		*h = new_node;
-		return (new_node);
-	}
+		return (add_dnodeint_end(h, n));
 	else if (idx < nodes)
 	{
 		i = 0;
@@ -56,6 +45,25 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		new_node->next->prev = new_node;
 		return (new_node);
 	}
-	free (new_node);
+	free(new_node);
 	return (NULL);
+}
+
+
+/**
+ * dlistint_len - function that
+ * returns the number of elements in a doubly linked list dlist_t.
+ * @h: pointer to the head of the list
+ * Return: size_t return the number of nodes
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	int nodes = 0;
+
+	while (h != NULL)
+	{
+		nodes++;
+		h = h->next;
+	}
+	return (nodes);
 }
