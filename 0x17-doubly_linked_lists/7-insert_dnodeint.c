@@ -23,14 +23,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->n = n;
 	aux_runner = *h;
 
+/*index in first position*/
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	if (idx == nodes)
+/*index in last position*/
+	else if (idx == nodes)
 		return (add_dnodeint_end(h, n));
+/*index in the a middle posiition*/
 	else if (idx < nodes)
 	{
 		i = 0;
-		while (i < idx - 1)
+		while (i < (idx - 1))
 		{
 			aux_runner = aux_runner->next;
 			i++;
