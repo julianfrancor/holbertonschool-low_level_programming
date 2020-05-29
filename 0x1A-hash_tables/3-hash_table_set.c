@@ -31,23 +31,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		ptr = ptr->next;/*help the loop to advance to the next node*/
 	}
-/*In case of collision, add the new node at the beginning of the list*/
-	new_node = malloc(sizeof(hash_node_t));
+	new_node = malloc(sizeof(hash_node_t)); /*In case of collision, add node */
 	if (!new_node)
 		return (0);
 	new_node->key = strdup(key);/*Now we will assgin */
 	if (!new_node->key)/*checks if no problem with malloc within strdup*/
-	{
-		free(new_node);
-		return (0);
-	}
+	{ free(new_node);
+	return (0); }
 	new_node->value = strdup(value);
 	if (!new_node->value)/*checks if no problem with malloc within strdup*/
-	{
-		free(new_node->key);
-		free(new_node);
-		return (0);
-	}
+	{ free(new_node->key);
+	free(new_node);
+	return (0); }
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
