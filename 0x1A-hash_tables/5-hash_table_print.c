@@ -7,7 +7,7 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned int i = 0, j = 0, size;
+	unsigned int i = 0, j = 0, size = 0;
 
 	if (ht != NULL)
 	{
@@ -15,7 +15,7 @@ void hash_table_print(const hash_table_t *ht)
 		printf("{");
 		for (i = 0; i < size; i++)
 		{
-			if (ht->array[i])
+			if (ht->array[i] != NULL)
 			{
 				if (j > 0)
 					printf(", ");
