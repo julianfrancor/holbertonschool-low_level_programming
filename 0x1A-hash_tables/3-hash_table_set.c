@@ -25,7 +25,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ptr->value = strdup(value);/*update the value*/
 			if (!ptr->value)/*checks if no problem with malloc within strdup*/
 				return (0);
-			ptr->value = (char *) value;/*Assign value to the key*/
 			return (1);/*return success*/
 		}
 		ptr = ptr->next;/*help the loop to advance to the next node*/
