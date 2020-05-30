@@ -72,7 +72,7 @@ int double_slist(shash_table_t *ht, shash_node_t *new)
     /*if it's null is beacuse the table is empty*/
     /*So we connect the new node to the head and the tail*/
         ht->shead = new;
-        ht->stail =  new;
+        ht->stail = new;
         return (1);/*return 1 when succeded*/
     }
     else/*if the list is not empty*/
@@ -140,7 +140,7 @@ void shash_table_print(const shash_table_t *ht)
 					printf(", ");
 				printf("'%s': '%s'", aux->key, aux->value);
 				j = 1;
-				aux = aux->next;
+				aux = aux->snext;
 		}
 		printf("}\n");
 	}
