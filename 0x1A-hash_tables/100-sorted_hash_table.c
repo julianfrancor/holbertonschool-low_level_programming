@@ -130,7 +130,6 @@ void shash_table_print(const shash_table_t *ht)
     unsigned int j = 0;
     shash_node_t *aux = NULL;
 
-
 	if (ht != NULL)
 	{
         aux = ht->shead;
