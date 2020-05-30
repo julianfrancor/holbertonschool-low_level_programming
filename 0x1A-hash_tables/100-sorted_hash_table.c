@@ -1,9 +1,13 @@
 #include "hash_tables.h"
 
-
+/**
+ * shash_table_create - function that creates a hash table.
+ * @size: is the size of the array
+ * Return: Returns a pointer to the newly created hash table
+ */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-    shash_table_t *table = NULL;
+	shash_table_t *table = NULL;
 
 	if (size < 1)
 		return (NULL);
@@ -22,7 +26,14 @@ shash_table_t *shash_table_create(unsigned long int size)
 	}
 	return (table);
 }
-
+/**
+ * shash_table_set - function that adds an element to the hash table.
+ * @ht: is the hash table you want to add or update the key/value to
+ * @key: is the key. key can not be an empty string.
+ * @value: is the value associated with the key. value must be duplicated.
+ * value can be an empty string
+ * Return: 1 if it succeeded, 0 otherwise
+ */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -46,7 +57,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		ptr = ptr->next;/*help the loop to advance to the next node*/
 	}
-	new_node = calloc(1, sizeof(shash_node_t)); /*In case of collision, add node */
+	new_node = calloc(1, sizeof(shash_node_t)); /*In case of collisionaddnode*/
 	if (!new_node)
 		return (0);
 	new_node->key = strdup(key);/*Now we will assgin */
@@ -63,51 +74,64 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (double_slist(ht, new_node));
 }
 
+/**
+ * double_slist - function that adds an element to the hash table.
+ * @ht: is the hash table you want to add or update the key/value to
+ * @new: is the key. key can not be an empty string.
+ * value can be an empty string
+ * Return: 1 if it succeeded, 0 otherwise
+ */
 int double_slist(shash_table_t *ht, shash_node_t *new)
 {
-    shash_node_t *aux = NULL;
+	shash_node_t *aux = NULL;
 
-    if (ht->shead == NULL)/*Check if the head of the doubly linked list is null*/
-    {
-    /*if it's null is beacuse the table is empty*/
-    /*So we connect the new node to the head and the tail*/
-        ht->shead = new;
-        ht->stail = new;
-        return (1);/*return 1 when succeded*/
-    }
-    else/*if the list is not empty*/
-    {
-        aux = ht->shead; /*we set the aux to the head to start running the doubly*/
-        if (strcmp(new->key, aux->key) < 0)
-        {
-            new->snext = aux;
-            new->sprev = NULL;
-            aux->sprev = new;
-            ht->shead = new;
-            return(1);
-        }
-    }
-    while (aux->snext && strcmp(new->key, aux->key) > 0)/*he will stop where he has to conect the new node to*/
-    {
-        aux = aux->snext;
-    }
-    /*add the new node at the end of the doubly linked list*/
-    if (aux->snext == NULL && strcmp(new->key, aux->key) > 0)
-    {
-        new->sprev = aux;
-        aux->snext = new;
-        ht->stail = new;
-        return (1);
-    }
-    /*to add node in the middle*/
-    new->snext = aux;
-    aux->sprev->snext = new;
-    new->sprev = aux->sprev;
-    aux->sprev = new;
-    return (1);
+	if (ht->shead == NULL)/*Check if the head of the doubly linked list is null*/
+	{
+	/*if it's null is beacuse the table is empty*/
+	/*So we connect the new node to the head and the tail*/
+		ht->shead = new;
+		ht->stail = new;
+		return (1);/*return 1 when succeded*/
+	}
+	else/*if the list is not empty*/
+	{
+		aux = ht->shead; /*we set the aux to the head to start running the doubly*/
+		if (strcmp(new->key, aux->key) < 0)
+		{
+			new->snext = aux;
+			new->sprev = NULL;
+			aux->sprev = new;
+			ht->shead = new;
+			return (1);
+		}
+	} /*he will stop where he has to conect the new node to*/
+	while (aux->snext && strcmp(new->key, aux->key) > 0)
+	{
+		aux = aux->snext;
+	}
+	/*add the new node at the end of the doubly linked list*/
+	if (aux->snext == NULL && strcmp(new->key, aux->key) > 0)
+	{
+		new->sprev = aux;
+		aux->snext = new;
+		ht->stail = new;
+		return (1);
+	}
+	/*to add node in the middle*/
+	new->snext = aux;
+	aux->sprev->snext = new;
+	new->sprev = aux->sprev;
+	aux->sprev = new;
+	return (1);
 }
 
-
+/**
+ * shash_table_get - function that retrieves a value associated with a key.
+ * @ht: is the hash table you want to look into.
+ * @key: is the key you are looking for
+ * Return: the value associated with the element, or NULL
+ * if key couldn’t be found
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	int idx;
@@ -125,43 +149,54 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (NULL);
 }
 
+/**
+ * shash_table_print - function that prints a hash table.
+ * @ht: is the hash table.
+ * Return: void
+ */
 void shash_table_print(const shash_table_t *ht)
 {
-    unsigned int j = 0;
-    shash_node_t *aux = NULL;
+	unsigned int j = 0;
+	shash_node_t *aux = NULL;
 
 	if (ht != NULL)
 	{
-        aux = ht->shead;
-        printf("{");
+		aux = ht->shead;
+		printf("{");
 		while (aux)
 		{
-				if (j == 1)
-					printf(", ");
-				printf("'%s': '%s'", aux->key, aux->value);
-				j = 1;
-				aux = aux->snext;
+			if (j == 1)
+				printf(", ");
+			printf("'%s': '%s'", aux->key, aux->value);
+			j = 1;
+			aux = aux->snext;
 		}
 		printf("}\n");
 	}
 }
+
+/**
+ * shash_table_print_rev - function that prints a hash table in reverse.
+ * @ht: is the hash table.
+ * Return: void
+ */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-    unsigned int j = 0;
-    shash_node_t *aux = NULL;
+	unsigned int j = 0;
+	shash_node_t *aux = NULL;
 
 
 	if (ht != NULL)
 	{
-        aux = ht->stail;
-        printf("{");
+		aux = ht->stail;
+		printf("{");
 		while (aux)
 		{
-				if (j == 1)
-					printf(", ");
-				printf("'%s': '%s'", aux->key, aux->value);
-				j = 1;
-				aux = aux->sprev;
+			if (j == 1)
+				printf(", ");
+			printf("'%s': '%s'", aux->key, aux->value);
+			j = 1;
+			aux = aux->sprev;
 		}
 		printf("}\n");
 	}
@@ -195,10 +230,14 @@ void free_list(shash_node_t *head)
 }
 
 
-
+/**
+ * shash_table_delete - function that deletes a hash table.
+ * @ht: is the hash table
+ * Return: void
+ */
 void shash_table_delete(shash_table_t *ht)
 {
-    unsigned int i = 0, size;
+	unsigned int i = 0, size;
 
 	if (ht == NULL)
 		return;
