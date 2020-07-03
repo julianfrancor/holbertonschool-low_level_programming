@@ -1,0 +1,15 @@
+# define the C compiler to use
+CC = gcc
+
+# define the C source files
+SRC = main.c holberton.c
+
+# Below we are replacing the suffix .c of all words in the macro SRC
+# with the .o suffix
+OBJ = $(SRC:.c=.o)
+
+# define the name of the executable file
+NAME = holberton
+
+all: $(OBJ)
+		$(CC) $(OBJ) -o $(NAME)
