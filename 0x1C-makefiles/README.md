@@ -36,19 +36,19 @@ What did I learn from this project:
 
 
 ### [3. make -f 3-Makefile](./3-Makefile)
-* Requirements:
+* makefile with rules: all, clean, oclean, fclean, re. variables: CC, SRC, OBJ, NAME, RM
 
 
 ### [4. A complete Makefile](./4-Makefile)
-* Requirements:
+* makefile with CFLAGS + (rules: all, clean, oclean, fclean, re. variables: CC, SRC, OBJ, NAME, RM)
 
 
 ### [5. Island Perimeter](./5-island_perimeter.py)
-* Technical interview preparation:
+* Technical interview preparation
 
 
 ### [6. make -f 100-Makefile](./100-Makefile)
-* Requirements:
+* PHONY and implicit CFLAGS
 
 ---
 
