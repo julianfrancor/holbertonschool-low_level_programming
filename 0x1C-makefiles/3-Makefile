@@ -12,21 +12,21 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 
 # the program to delete files
-RM = rm
+RM = rm -f
 
 # ========================== RULES ==========================
 # all: builds your executable
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+		$(CC) $(OBJ) -o $(NAME)
 
 # clean: deletes all Emacs and Vim temporary files along with the executable
 # $~ --> deletes the Emacs temporary files ending with "~"
 clean:
-	$(RM) $~ $(NAME)
+		$(RM) $~ $(NAME)
 
 # oclean: deletes the object files "-f"
 oclean:
-	$(RM) -f $(OBJ)
+		$(RM) -f $(OBJ)
 
 # fclean: deletes the Emacs temporary files, the executable, and the object files
 fclean: clean oclean
