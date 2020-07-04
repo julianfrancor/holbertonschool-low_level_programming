@@ -1,18 +1,18 @@
 # ======================== VARIABLES ========================
 # define the C compiler to use
-CC = gcc
+CC=gcc
 
 # define the C source files
 SRC = main.c holberton.c
 
 # replaces the suffix .c of all words in the macro SRC with the .o suffix
-OBJ = $(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 
 # define the name of the executable file
-NAME = holberton
+NAME=holberton
 
 # the program to delete files
-RM = rm -f
+RM=rm -f
 
 # ========================== RULES ==========================
 # all: builds your executable
