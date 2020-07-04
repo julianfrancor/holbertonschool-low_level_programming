@@ -1,0 +1,29 @@
+# ======================== VARIABLES ========================
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+
+# the compiler should still use the flags you set in this variable
+# so we need to set it because it will use it implicity
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# ========================== RULES ==========================
+# con el PHONY evitamos que el programa falle por archivos que se llamen igual
+# que nuestras reglas, entonces hacemos que no se confundan targets con reglas
+.PHONY: all clean oclean fclean re
+
+# Makefile should not compile if the header file m.h
+# is missing so it has to be a prerequisite to compile
+all: m.h $(OBJ)
+		$(CC) $(OBJ) -o $(NAME)
+
+clean:
+		$(RM) *~ $(NAME)
+
+oclean:
+		$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
