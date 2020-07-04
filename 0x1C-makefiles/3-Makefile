@@ -22,7 +22,7 @@ all: $(OBJ)
 # To avoid targets with functions
 # To avoid this problem you can explicitly declare the target to be
 # phony by making it a prerequisite of the special target
-.PHONY clean oclean fclean re
+.PHONY: clean oclean fclean re
 
 
 # clean: deletes all Emacs and Vim temporary files along with the executable
@@ -38,4 +38,4 @@ oclean:
 fclean: clean oclean
 
 # re: forces recompilation of all source files, the all implicit will take the SRC
-re: oclean all
+re: fclean all
