@@ -40,7 +40,3 @@ def island_perimeter(grid):
                 if (x == 0 or grid[y][x - 1] == agua):
                     perimeter += 1
     return(perimeter)
-
-
-
-
