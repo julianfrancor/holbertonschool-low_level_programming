@@ -12,7 +12,7 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 
 # the program to delete files
-RM = rm -f
+RM = rm
 
 # ========================== RULES ==========================
 # all: builds your executable
