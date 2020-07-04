@@ -1,18 +1,35 @@
+# ======================== VARIABLES ========================
+# define the C compiler to use
 CC = gcc
+
+# define the C source files
 SRC = main.c holberton.c
+
+# replaces the suffix .c of all words in the macro SRC with the .o suffix
 OBJ = $(SRC:.c=.o)
+
+# define the name of the executable file
 NAME = holberton
+
+# the program to delete files
 RM = rm -f
 
+# ========================== RULES ==========================
+# all: builds your executable
 all: $(OBJ)
-		$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
+# clean: deletes all Emacs and Vim temporary files along with the executable
+# $~ --> deletes the Emacs temporary files ending with "~"
 clean:
-		$(RM) $~ $(NAME)
+	$(RM) $~ $(NAME)
 
+# oclean: deletes the object files "-f"
 oclean:
-		$(RM) -f $(OBJ)
+	$(RM) -f $(OBJ)
 
+# fclean: deletes the Emacs temporary files, the executable, and the object files
 fclean: clean oclean
 
+# re: forces recompilation of all source files, the all implicit will take the SRC
 re: oclean all
