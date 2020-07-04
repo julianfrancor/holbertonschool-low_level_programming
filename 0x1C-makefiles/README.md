@@ -2,7 +2,13 @@
 
 ## Resources:books:
 Read or watch:
-* [Makefile](https://intranet.hbtn.io/rltoken/E3lCL-6xT3Qt_K38Tk4s_g)
+* [What is a Makefile and how does it work?](https://opensource.com/article/18/8/what-how-makefile)
+* [GNU make](https://www.gnu.org/software/make/manual/make.html#Introduction)
+* [Using make and writing Makefiles](https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html)
+* [Makefile cheatsheet](https://devhints.io/makefile)
+* [A simple makefile tutorial](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
+* [How to create a makefile](https://www.youtube.com/watch?time_continue=1&v=_r7i5X0rXJk&feature=emb_logo)
+* [PHONY](https://www.gnu.org/software/make/manual/html_node/Cleanup.html)
 
 ---
 ## Learning Objectives:bulb:
