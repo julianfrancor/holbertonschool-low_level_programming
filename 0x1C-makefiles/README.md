@@ -28,11 +28,11 @@ What did I learn from this project:
 
 
 ### [1. make -f 1-Makefile](./1-Makefile)
-* Requirements:
+* Create a useful Makefile.
 
 
 ### [2. make -f 2-Makefile](./2-Makefile)
-* Create your first useful Makefile.
+* Create a useful Makefile.
 
 
 ### [3. make -f 3-Makefile](./3-Makefile)
