@@ -1,0 +1,25 @@
+# ======================== VARIABLES ========================
+CC = gcc
+SRC = main.c holberton.c
+OBJ = $(SRC:.c=.o)
+NAME = holberton
+RM = rm -f
+
+# define any compile-time flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# ========================== RULES ==========================
+all: $(OBJ)
+		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+.PHONY: clean oclean fclean re
+
+clean:
+		$(RM) *~ $(NAME)
+
+oclean:
+		$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
