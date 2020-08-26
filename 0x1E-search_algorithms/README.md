@@ -4,6 +4,9 @@
 Read or watch:
 * [Search algorithm](https://intranet.hbtn.io/rltoken/ntNFhA9urmBxZfcn8gjsqw)
 * [Space complexity (1)](https://intranet.hbtn.io/rltoken/pPScxisIQ0eOPBPXkjcEmg)
+* [Introduction to Big O Notation and Time Complexity](https://www.youtube.com/watch?v=D6xkbGLQesk)
+* [The Ultimate Big O Notation Tutorial (Time & Space Complexity For Algorithms)](https://www.youtube.com/watch?v=waPQP2TDOGE)
+* [Linear search](https://en.wikipedia.org/wiki/Linear_search)
 
 ---
 ## Learning Objectives:bulb:
