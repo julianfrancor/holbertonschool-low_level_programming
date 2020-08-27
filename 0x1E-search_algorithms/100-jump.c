@@ -22,10 +22,6 @@ int jump_search(int *array, size_t size, int value)
 {
 	size_t step = 0, prev = 0, ahead = 0;
 
-	/*the prev will jump the blocks value, starting from zero*/
-	prev = 0;
-	ahead = 0;
-
 	if (array == NULL || size == 0)
 		return (-1);
 
@@ -52,7 +48,7 @@ int jump_search(int *array, size_t size, int value)
 	printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
 
 	if (array[prev] == value)
-		return (prev);
+		return ((int)prev);
 
 	return (-1);
 }
