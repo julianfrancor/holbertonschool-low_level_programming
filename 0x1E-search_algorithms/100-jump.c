@@ -1,8 +1,8 @@
 
 #include "search_algos.h"
+
 #include <math.h>
 #include <stdio.h>
-
 
 /**
  * jump_search - function that searches for a value in a sorted array
@@ -26,7 +26,7 @@ int jump_search(int *array, size_t size, int value)
 	prev = 0;
 	ahead = 0;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	/*the optimal value of the step is (n^(1/2)) = sqrt(n)*/
